@@ -3,8 +3,6 @@ from Objets.Obj import Objet
 from Objets.Lumiere import Lumiere
 
 
-
-
 if __name__ == "__main__":
     maison = Maison()
     maison.ajouter_piece('Chambre')
