@@ -9,8 +9,6 @@ def get_wifi_ip():
     return wifi_ip
 
 
-
-
 def arp_scan(ip_range):
     # Envoie de requêtes ARP pour chaque adresse IP dans la plage donnée
     ans, unans = srp(Ether(dst="ff:ff:ff:ff:ff:ff")/ARP(pdst=ip_range), timeout=2, verbose=False)
@@ -19,4 +17,3 @@ def arp_scan(ip_range):
     for snd, rcv in ans:
         devices.append((rcv.sprintf("%Ether.src%"), rcv.sprintf("%ARP.psrc%")))
     return devices
-
