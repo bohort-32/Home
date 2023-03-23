@@ -1,4 +1,5 @@
 from Fonctions.analyse_reseau import *
+from Objets.Piece import Piece
 
 # Définition de la classe
 class Maison:
@@ -10,7 +11,11 @@ class Maison:
     # --- Get liste piece
     def get_liste_piece(self):
         return self.liste_piece
-    
+
+    # --- Get piece by id
+    def get_piece_by_id(self, id):
+        return self.get_liste_piece()[id]
+
     # --- Get ip
     def get_ip(self):
         return self.ip
@@ -25,3 +30,8 @@ class Maison:
         ip_range = f"{get_wifi_ip()}/24"
         devices = arp_scan(ip_range)
         return len(devices)
+
+    # --- Ajouter piece
+    def ajouter_piece(self, nom_piece):
+        piece = Piece(nom_piece)
+        self.liste_piece.append(piece)

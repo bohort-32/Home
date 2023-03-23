@@ -1,5 +1,8 @@
-from Objets.Maison import *
+from Objets.Maison import Maison
+from Objets.Obj import Objet
+from Objets.Lumiere import Lumiere
 
 if __name__ == "__main__":
     maison = Maison()
-    print(maison.get_liste_appareils_connectees())
+    maison.ajouter_piece('Chambre')
+    maison.get_piece_by_id(0)
