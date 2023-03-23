@@ -1,4 +1,5 @@
 import pickle
+import os
 
 def sauvegarder(fic_sav, objet):
     with open(fic_sav, "wb") as f:
@@ -6,5 +7,8 @@ def sauvegarder(fic_sav, objet):
 
 
 def charger(fic_sav):
-    with open(fic_sav, "rb") as f:
-        return (pickle.load(f))
+    if os.path.isfile(fic_sav):
+        with open(fic_sav, "rb") as f:
+            return (pickle.load(f))
+    else:
+        print('Aucun fichier à charger')
