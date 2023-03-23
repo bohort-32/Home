@@ -3,9 +3,9 @@ from Objets.Obj import *
 # Définition de la classe
 class Lumiere(Objet):
     # --- Initialisation
-    def __init__(self, nom, description=None):
+    def __init__(self, id, nom, description=None):
         # Héritage
-        Objet.__init__(self, nom, description)
+        Objet.__init__(self, id, nom, description)
         # Etat
         self.allume = False
     
