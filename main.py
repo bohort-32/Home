@@ -5,4 +5,5 @@ from Objets.Lumiere import Lumiere
 if __name__ == "__main__":
     maison = Maison()
     maison.ajouter_piece('Chambre')
-    maison.get_piece_by_id(0)
+    chambre = maison.get_piece_by_id(0)
+    

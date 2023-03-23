@@ -7,10 +7,19 @@ class Maison:
     def __init__(self, ip=None):
         self.ip = ip
         self.liste_piece = []
+        self.nb_piece = 0
 
     # --- Get liste piece
     def get_liste_piece(self):
         return self.liste_piece
+    
+    # --- Get nb piece
+    def get_nb_piece(self):
+        return self.nb_piece
+
+    # --- Increment nb piece
+    def increment_nb_piece(self):
+        self.nb_piece = self.get_nb_piece() + 1
 
     # --- Get piece by id
     def get_piece_by_id(self, id):
@@ -33,5 +42,6 @@ class Maison:
 
     # --- Ajouter piece
     def ajouter_piece(self, nom_piece):
-        piece = Piece(nom_piece)
+        piece = Piece(nom_piece, self.get_nb_piece())
+        self.increment_nb_piece()
         self.liste_piece.append(piece)
