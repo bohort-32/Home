@@ -11,4 +11,4 @@ def charger(fic_sav):
         with open(fic_sav, "rb") as f:
             return (pickle.load(f))
     else:
-        print('Aucun fichier à charger')
+        return None
