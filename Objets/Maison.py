@@ -20,7 +20,7 @@ class Maison:
         self.ip = nv_ip
 
     # --- Get liste_appareil connecte
-    def get_liste_appareils_connectees(self, nv_ip):
+    def get_liste_appareils_connectees(self):
         # Définition de la plage d'adresses IP à analyser
         ip_range = f"{get_wifi_ip()}/24"
         devices = arp_scan(ip_range)
