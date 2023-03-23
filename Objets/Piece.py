@@ -4,7 +4,7 @@ class Piece:
     def __init__(self, id, nom):
         self.id = id
         self.nom = nom
-        self.liste_obj = []
+        self.liste_obj = {}
 
     # --- Get Id
     def get_id(self):
@@ -28,4 +28,4 @@ class Piece:
 
     # --- Ajouter un objet
     def ajouter_objet(self, objet):
-        self.liste_obj.append(objet)
+        self.liste_obj[objet.get_id()] = objet
