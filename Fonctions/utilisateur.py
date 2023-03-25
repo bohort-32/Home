@@ -22,3 +22,41 @@ def input_check(question, type):
         rep_usr = input_check(f"{question} : ")
     # Return answer
     return rep_usr
+
+
+
+def input_int(question):
+    # Essaye l'input en int
+    try:
+        rep_usr = int(input(question))
+    # Si ça ne marche pas : Message erreur + reassaie
+    except:
+        print('Erreur de saisie')
+        rep_usr = input_int(question)
+    return rep_usr
+
+
+
+def afficher_liste(liste_proposition):
+    # Construction du texte à afficher
+    text = '0 pour sortir\n'
+    proposition_courante = 1
+    for proposition in liste_proposition:
+        text = f"{text}{proposition_courante} - {proposition}\n"
+        proposition_courante = proposition_courante + 1
+    text = f"{text}\nVotre choix : "
+
+    return text
+
+
+
+def afficher_menu(liste_proposition):
+    text = afficher_liste(liste_proposition)
+    # Choix utilisateur
+    rep_usr = None
+    while rep_usr != 0:
+        rep_usr = input_int(text)
+        if rep_usr in range(1,len(liste_proposition)+1):
+            print(rep_usr)
+        elif rep_usr != -0:
+            print('Erreur de saisie')

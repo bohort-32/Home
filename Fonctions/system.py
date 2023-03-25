@@ -41,3 +41,7 @@ def initialiser_maison():
         # Demande pour ajouter une nouvelle piece
         maison.ajouter_piece(nom_piece)
         ajouter_piece = input_YN('Ajouter pièce ?')
+
+
+
+
