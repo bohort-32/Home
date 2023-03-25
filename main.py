@@ -3,5 +3,7 @@ import Fonctions.utilisateur as FONC_USR
 
 if __name__ == "__main__":
     # Chargement du fichier
-    SAV = FONC_SYS.charger()
-    print(FONC_USR.afficher_menu(['Test', 'Hola']))
+    maison = FONC_SYS.charger()
+    print(maison.to_string_maison())
+    #print(FONC_SYS.afficher_menu_creation())
+

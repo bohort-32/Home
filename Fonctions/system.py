@@ -2,7 +2,7 @@
 import pickle
 import os
 # === Imports INT === #
-from Objets.Maison import *
+from Objets.Maison import Maison
 from Fonctions.utilisateur import *
 
 
@@ -27,7 +27,7 @@ def charger(fic_sav='./SAV/fic.sav'):
     else:
         creer_maison = input_YN('Créer une maison')
         if creer_maison == True:
-            initialiser_maison()
+            return initialiser_maison()
 
 
 def initialiser_maison():
@@ -41,7 +41,20 @@ def initialiser_maison():
         # Demande pour ajouter une nouvelle piece
         maison.ajouter_piece(nom_piece)
         ajouter_piece = input_YN('Ajouter pièce ?')
+    
+    return maison
 
 
 
-
+def afficher_menu_creation(maison):
+    liste_proposition = ['Créer une pièce']
+    text = afficher_liste(liste_proposition)
+    # Choix utilisateur
+    rep_usr = None
+    while rep_usr != 0:
+        rep_usr = input_int(text)
+        if rep_usr in range(1,len(liste_proposition)+1):
+            if rep_usr == 1:
+                print("Pièce !")
+        elif rep_usr != 0:
+            print('Erreur de saisie')

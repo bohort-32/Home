@@ -1,3 +1,5 @@
+from Objets.Obj import Objet
+
 # Définition de la classe
 class Piece:
     # --- Initialisation
@@ -29,3 +31,10 @@ class Piece:
     # --- Ajouter un objet
     def ajouter_objet(self, objet):
         self.liste_obj[objet.get_id()] = objet
+
+    # --- To string Piece
+    def to_string_piece(self):
+        text = f"PI{self.get_id()} - {self.get_nom()}\n"
+        for obj in self.get_liste_objet():
+            text = f"{text} == {obj.to_string_obj}"
+        return text

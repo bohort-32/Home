@@ -50,3 +50,10 @@ class Maison:
         self.liste_piece[piece.get_id()] = piece
         # Ajouter sauvegarde auto
         FONC_SYS.sauvegarder(self)
+
+    # --- To string Maison
+    def to_string_maison(self):
+        text = ''
+        for id in self.get_liste_piece():
+            text = f"{text}\n{self.get_piece_by_id(id).to_string_piece()}"
+        return text

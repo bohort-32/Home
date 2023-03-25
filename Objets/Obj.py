@@ -20,3 +20,7 @@ class Objet:
     # --- Get Description
     def get_description(self):
         return self.description
+    
+    # --- To string Obj
+    def to_string_obj(self):
+        return f"OBJ{self.get_id()} - {self.get_nom()} - {self.get_description}"

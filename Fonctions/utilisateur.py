@@ -49,14 +49,3 @@ def afficher_liste(liste_proposition):
     return text
 
 
-
-def afficher_menu(liste_proposition):
-    text = afficher_liste(liste_proposition)
-    # Choix utilisateur
-    rep_usr = None
-    while rep_usr != 0:
-        rep_usr = input_int(text)
-        if rep_usr in range(1,len(liste_proposition)+1):
-            print(rep_usr)
-        elif rep_usr != -0:
-            print('Erreur de saisie')
