@@ -1,6 +1,5 @@
 from Fonctions.analyse_reseau import *
 from Objets.Piece import Piece
-from Fonctions.system import *
 
 # Définition de la classe
 class Maison:
@@ -47,3 +46,4 @@ class Maison:
         self.increment_nb_piece()
         self.liste_piece[piece.get_id()] = piece
         # Ajouter sauvegarde auto
+        
