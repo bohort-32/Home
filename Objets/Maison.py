@@ -1,6 +1,6 @@
 # === Imports INT === #
 from Fonctions.analyse_reseau import *
-from Fonctions.system import *
+import Fonctions.system as FONC_SYS
 from Objets.Piece import Piece
 
 
@@ -49,4 +49,4 @@ class Maison:
         self.increment_nb_piece()
         self.liste_piece[piece.get_id()] = piece
         # Ajouter sauvegarde auto
-        sauvegarder(self)
+        FONC_SYS.sauvegarder(self)
