@@ -1,9 +1,6 @@
-from Objets.Maison import Maison
-from Fonctions.system import *
-from Fonctions.utilisateur import *
+from Fonctions.system import charger
 
 
 if __name__ == "__main__":
-
     # Chargement du fichier
     SAV = charger()

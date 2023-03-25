@@ -1,3 +1,4 @@
+# === Imports INT === #
 from Objets.Obj import *
 
 # Définition de la classe

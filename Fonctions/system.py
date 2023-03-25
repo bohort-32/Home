@@ -1,8 +1,9 @@
+# === Imports EXT === #
 import pickle
 import os
+# === Imports INT === #
 from Objets.Maison import Maison
 from Fonctions.utilisateur import *
-
 
 def sauvegarder(objet, fic_sav='/SAV/fic.sav'):
     with open(fic_sav, "wb") as f:

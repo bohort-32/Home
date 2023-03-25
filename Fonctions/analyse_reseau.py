@@ -1,3 +1,4 @@
+# === Imports EXT === #
 from scapy.all import *
 
 # Retourne l'IP wifi connectée
