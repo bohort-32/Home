@@ -1,5 +1,5 @@
-from Fonctions.system import charger
+import Fonctions.system as FONC_SYS
 
 if __name__ == "__main__":
     # Chargement du fichier
-    SAV = charger()
+    SAV = FONC_SYS.charger()
