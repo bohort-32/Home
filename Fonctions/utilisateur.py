@@ -14,7 +14,7 @@ def input_YN(question):
 
 
 # --- Input for checking
-def input_check(question, type):
+def input_check(question, type=str):
     # Rep for user
     rep_usr = input(f"{question} : ")
     # Check for type
@@ -47,5 +47,3 @@ def afficher_liste(liste_proposition):
     text = f"{text}\nVotre choix : "
 
     return text
-
-

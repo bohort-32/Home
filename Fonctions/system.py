@@ -3,6 +3,7 @@ import pickle
 import os
 # === Imports INT === #
 from Objets.Maison import Maison
+from Objets.Lumiere import Lumiere
 from Fonctions.utilisateur import *
 
 
@@ -47,14 +48,15 @@ def initialiser_maison():
 
 
 def afficher_menu_creation(maison):
-    liste_proposition = ['Créer une pièce']
+    liste_proposition = ['Créer une pièce','Créer une lumiere']
     text = afficher_liste(liste_proposition)
     # Choix utilisateur
     rep_usr = None
     while rep_usr != 0:
         rep_usr = input_int(text)
         if rep_usr in range(1,len(liste_proposition)+1):
+            # Ajout d'une pièce
             if rep_usr == 1:
-                print("Pièce !")
+                maison.ajouter_piece(input_check('Nom de la piece'))
         elif rep_usr != 0:
             print('Erreur de saisie')

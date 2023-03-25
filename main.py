@@ -6,5 +6,5 @@ if __name__ == "__main__":
     maison = FONC_SYS.charger()
     if maison != None:
         print(maison.to_string_maison())
-        #print(FONC_SYS.afficher_menu_creation())
+        FONC_SYS.afficher_menu_creation(maison)
 
