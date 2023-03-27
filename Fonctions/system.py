@@ -26,9 +26,7 @@ def charger(fic_sav='./SAV/fic.sav'):
             return (pickle.load(f))
     # Aucun fichier n'est présent
     else:
-        creer_maison = input_YN('Créer une maison')
-        if creer_maison == True:
-            return initialiser_maison()
+        return None
 
 
 def initialiser_maison():

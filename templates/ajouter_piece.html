@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Initialisation de la maison</title>
+  <script src="{{ url_for('static', filename='js/creation_pieces.js') }}"></script>
+</head>
+
+<body>
+  <h1>Création d'une pièce</h1>
+
+  <!-- Formulaire nombre de pieces -->
+  <form method="POST" action="/add_piece" id="formulaire_ajout_piece">
+    <!-- Input nombre de pieces à ajouter -->
+    <div>
+      <label for="nb_piece">Nombre de pieces :</label>
+      <input type="number" id="nb_piece" name="nb_piece" min="1" step="1" value="1">
+    </div>
+
+    <div id="div_piece_1">
+      <label for="nom_piece_1">Nom de la pièce :</label>
+      <input id="nom_piece_1" name="nom_piece_1" required>
+    </div>
+    <button type="submit" id="btn_ajouter">Ajouter</button>
+  </form>
+
+
+  <!-- Formulaire sortie -->
+  <form action="/">
+    <button type="submit">Sortir</button>
+  </form>
+
+</body>
+
+</html>
